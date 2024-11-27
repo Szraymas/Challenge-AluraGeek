@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.header, .footer {
+    width: 100%;
+    background-color: #5b00a6;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.products-section {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.products-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.product-card {
+    background-color: #4e0097;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product-card p {
+    margin: 5px 0;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 0.9em;
+    border-radius: 3px;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.add-product-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.add-product-form h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.add-product-form input, .add-product-form button {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.add-product-form button {
+    background-color: #004aad;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.add-product-form button[type="reset"] {
+    background-color: #ddd;
+    color: #000;
+}
+
+.add-product-form button[type="reset"]:hover {
+    background-color: #a51d0477;
+}
+
+.add-product-form button:hover {
+    background-color: #004badc5;
+}
+
+.footer p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+    }
+
+    .products-section {
+        width: 100%;
+        margin: 0;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .add-product-form {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section h2, .add-product-form h2 {
+        font-size: 18px;
+    }
+
+    .add-product-form input, .add-product-form button {
+        width: 100%;
+    }
+}
