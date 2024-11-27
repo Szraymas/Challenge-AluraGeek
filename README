@@ -1,0 +1,69 @@
+AluraGeek - Tienda Online Simulada
+
+Este proyecto es una simulación de una tienda en línea llamada AluraGeek, en la que los usuarios pueden agregar productos, visualizar una cuadrícula de productos y eliminarlos según sea necesario. 
+Este README explica cómo se construyó el proyecto, cómo funciona, y las características clave que contiene.
+
+1. Descripción del Proyecto
+
+El objetivo del proyecto es simular una tienda en línea utilizando un sistema de backend simulado con JSON Server. Los usuarios pueden interactuar con la tienda para:
+
+Agregar productos: Nombre, precio y una imagen utilizando una URL.
+Visualizar los productos: En una cuadrícula responsiva.
+Eliminar productos: Directamente desde la página, tanto del frontend como del backend.
+
+2. Estructura del Proyecto
+
+Archivos Principales
+index.html: Contiene la estructura de la interfaz de usuario.
+styles.css: Maneja los estilos y la apariencia del proyecto.
+js/api.js: Archivo para gestionar las operaciones CRUD con JSON Server.
+js/app.js: Maneja las interacciones de la interfaz de usuario.
+db.json: Simula el backend, contiene los datos de los productos
+
+3. Instalación y Configuración
+
+Requisitos Previos
+Tener Node.js instalado.
+Instalar JSON Server globalmente o como dependencia del proyecto:
+
+npm install -g json-server
+
+  3.1 Clona este repositorio o descargalo:
+
+  git clone https://github.com/Szraymas/Challenge-AluraGeek.git
+  cd Challenge-AluraGeek
+
+  3.2 Inicia el servidor JSON para simular el backend:
+
+  json-server --watch db.json
+
+  El servidor se ejecutará en http://localhost:3000/products.
+
+  3.3 Abre el archivo index.html en tu navegador.
+
+4. Características del Proyecto
+
+  4.1. Visualización de Productos
+
+  Los productos se cargan dinámicamente desde db.json mediante la función GET usando fetch y se muestran en una cuadrícula.
+  La cuadrícula es completamente responsiva, adaptándose a distintos tamaños de pantalla.
+
+  4.2. Agregar Productos
+
+  El formulario permite ingresar un nombre, precio y URL de la imagen.
+  Al enviar el formulario, se realiza una solicitud POST al servidor JSON, que guarda el producto en db.json.
+
+  4.3. Carga Dinámica de Imágenes
+
+  Las imágenes de los productos se cargan dinámicamente en la cuadrícula al ingresar la URL de la imagen en el formulario.
+
+  4.4. Eliminar Productos
+
+  Cada tarjeta de producto contiene un botón "Eliminar".
+  Al hacer clic en el botón, se realiza una solicitud DELETE al servidor para eliminar el producto tanto de la interfaz como de la base de datos.
+
+
+AUTOR
+Felipe Suárez Másmela
+Proyecto desarrollado para el curso de Alura Latam - Oracle Next Education.
+
